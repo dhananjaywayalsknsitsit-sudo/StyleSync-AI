@@ -1,0 +1,16 @@
+{% extends "base.html" %}{% block title %}StyleSync AI — Virtual Fashion Studio{% endblock %}
+{% block content %}
+<section class="hero">
+<div><p class="eyebrow">YOUR PERSONAL AI FASHION STUDIO</p><h1>Try the look.<br><em>Before you wear it.</em></h1>
+<p class="lead">Upload your photo, choose an outfit and preview a virtual try-on powered by AI. Explore outfit ideas that match your style.</p>
+<div class="actions"><a class="btn primary" href="{{ url_for('register') }}">Start Styling →</a><a class="btn secondary" href="{{ url_for('login') }}">I have an account</a></div>
+<div class="stats"><div><b>AI</b><small>Virtual Try-On</small></div><div><b>24/7</b><small>Your style studio</small></div><div><b>∞</b><small>Explore looks</small></div></div>
+</div>
+<div class="hero-art"><div class="orbit"></div><div class="fashion-card"><div class="fashion-emoji">👕</div><div class="fashion-label">YOUR NEXT LOOK</div><div class="fashion-sub">Made for your style</div></div><div class="float-tag">✦ AI powered styling</div></div>
+</section>
+<section class="section"><p class="eyebrow">HOW IT WORKS</p><h2>Three steps to your new look</h2><div class="grid three">
+<div class="card"><div class="step">01</div><h3>Upload your photo</h3><p>Add a clear, front-facing photo of yourself.</p></div>
+<div class="card"><div class="step">02</div><h3>Choose an outfit</h3><p>Upload a clothing product image you want to try.</p></div>
+<div class="card"><div class="step">03</div><h3>See your AI look</h3><p>Generate and save your virtual try-on result.</p></div>
+</div></section>
+{% endblock %}

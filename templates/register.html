@@ -1,0 +1,3 @@
+{% extends "base.html" %}{% block title %}Create account{% endblock %}{% block content %}
+<div class="auth-wrap"><form class="form-card" method="post"><p class="eyebrow">JOIN STYLESYNC</p><h1>Create account</h1><label>Full name</label><input name="name" required maxlength="70" placeholder="Your name"><label>Email</label><input type="email" name="email" required placeholder="you@example.com"><label>Password</label><input type="password" name="password" minlength="8" required placeholder="At least 8 characters"><button class="btn primary full">Create account</button><p class="muted center">Already registered? <a href="{{ url_for('login') }}">Login</a></p></form></div>
+{% endblock %}

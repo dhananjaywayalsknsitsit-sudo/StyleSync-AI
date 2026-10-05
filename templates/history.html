@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% block title %}History{% endblock %}{% block content %}
+<p class="eyebrow">YOUR PREVIOUS LOOKS</p><h1>Try-on history</h1>
+{% if items %}<div class="grid four">{% for item in items %}<a class="result-card" href="{{ url_for('result', item_id=item._id) }}"><img src="{{ item.result_url }}" alt="Try-on"><b>{{ item.category|title }}</b><small>{{ item.created_at.strftime('%d %b %Y, %I:%M %p') }}</small></a>{% endfor %}</div>{% else %}<div class="empty">Your generated looks will appear here.</div>{% endif %}
+{% endblock %}

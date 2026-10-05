@@ -1,0 +1,10 @@
+{% extends "base.html" %}{% block title %}Virtual Try-On{% endblock %}{% block content %}
+<div class="narrow wide"><p class="eyebrow">AI VIRTUAL FITTING ROOM</p><h1>Try a new look</h1><p class="muted">Use a clear, well-lit photo. Keep your full upper body visible for tops.</p>
+<form class="form-card" method="post" enctype="multipart/form-data">
+<div class="upload-grid"><div><label>Your photo</label><input type="file" name="person_image" accept="image/png,image/jpeg,image/webp" required data-preview="person-preview"><img id="person-preview" class="preview" alt="Your photo preview"></div>
+<div><label>Clothing photo</label><input type="file" name="garment_image" accept="image/png,image/jpeg,image/webp" required data-preview="garment-preview"><img id="garment-preview" class="preview" alt="Clothing preview"></div></div>
+<label>Clothing category</label><select name="category"><option value="tops">Tops / Shirts</option><option value="bottoms">Bottoms / Pants</option><option value="one-pieces">Dresses / One-pieces</option><option value="accessories">Accessories</option></select>
+<label>Optional styling instruction</label><input name="prompt" maxlength="300" placeholder="Example: tuck in the shirt, roll up sleeves">
+<p class="small muted">AI processing uses a paid third-party API. Do not upload photos without the person's permission.</p>
+<button class="btn primary full">Generate Virtual Try-On ✦</button></form></div>
+{% endblock %}

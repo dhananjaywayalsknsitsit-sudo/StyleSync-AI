@@ -1,0 +1,3 @@
+{% extends "base.html" %}{% block title %}Favourites{% endblock %}{% block content %}
+<p class="eyebrow">SAVED STYLES</p><h1>Your favourites</h1>{% if items %}<div class="grid four">{% for item in items %}<div class="result-card"><img src="{{ item.result_url }}" alt="Favourite outfit"><b>Saved look</b><small>{{ item.created_at.strftime('%d %b %Y') }}</small></div>{% endfor %}</div>{% else %}<div class="empty">Save try-on results to see them here.</div>{% endif %}
+{% endblock %}

@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% block title %}Your AI Result{% endblock %}{% block content %}
+<p class="eyebrow">YOUR NEW LOOK</p><h1>Virtual try-on result ✨</h1><div class="compare"><div><small>YOUR PHOTO</small><img src="{{ item.person_image }}" alt="Original person"></div><div><small>AI TRY-ON</small><img src="{{ item.result_url }}" alt="AI generated try-on"></div></div>
+<div class="actions"><a class="btn secondary" href="{{ url_for('try_on') }}">Try another outfit</a><form method="post" action="{{ url_for('favorite', item_id=item._id) }}"><button class="btn primary">♡ Save favourite</button></form></div><p class="small muted">AI-generated preview. Actual fit, size and appearance may differ from this image.</p>
+{% endblock %}
